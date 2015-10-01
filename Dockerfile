@@ -15,6 +15,7 @@ RUN curl -o /opt/titan.zip http://s3.thinkaurelius.com/downloads/titan/titan-1.0
 WORKDIR /opt/titan-1.0.0-hadoop1/
 
 ADD run.sh /opt/titan-1.0.0-hadoop1/
+RUN chmod +x /opt/titan-1.0.0-hadoop1/run.sh
 
 EXPOSE 8182
 EXPOSE 8183
