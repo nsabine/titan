@@ -2,7 +2,7 @@ FROM rhel7
 
 MAINTAINER Nick Sabine <nsabine@redhat.com>
 
-RUN yum update && yum install -y java-1.8.0-openjdk curl unzip && yum clean all
+RUN yum install -y java-1.8.0-openjdk curl unzip && yum clean all
 
 ENV TITAN_VERSION 1.0.0-hadoop1
 ENV TITAN_HOME /opt/titan-$TITAN_VERSION/
