@@ -20,5 +20,8 @@ g = TitanFactory.open("${TITAN_PROPERITES}")
 println "The graph g was opened using ${TITAN_PROPERTIES}"
 EOL
 
+chmod 644 ${TITAN_PROPERTIES}
+chmod 644 ${TITAN_HOME}/init.groovy
+
 exec ${TITAN_HOME}/bin/gremlin.sh ${TITAN_HOME}/init.groovy
 
