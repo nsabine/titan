@@ -1,0 +1,13 @@
+{
+  "kind": "Route",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "titan-route"
+  },
+  "spec": {
+    "host": "titan.cloudapps.example.com",
+    "to": {
+      "name": "titan"
+    }
+  }
+}
