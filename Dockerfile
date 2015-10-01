@@ -15,6 +15,7 @@ RUN curl -o /opt/titan.zip http://s3.thinkaurelius.com/downloads/titan/titan-1.0
 WORKDIR /opt/titan-1.0.0-hadoop1/
 
 ADD run.sh /opt/titan-1.0.0-hadoop1/
+ADD rexster-titan.xml.template /opt/titan-1.0.0-hadoop1/
 RUN chmod +x /opt/titan-1.0.0-hadoop1/run.sh
 RUN find /opt -type f -exec chmod a+rw {} \;
 RUN find /opt -type d -exec chmod a+rwx {} \;
