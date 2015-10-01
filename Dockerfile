@@ -16,6 +16,8 @@ WORKDIR /opt/titan-1.0.0-hadoop1/
 
 ADD run.sh /opt/titan-1.0.0-hadoop1/
 RUN chmod +x /opt/titan-1.0.0-hadoop1/run.sh
+RUN find /opt -type f -exec chmod a+r {} \;
+RUN find /opt -type d -exec chmod a+rx {} \;
 
 EXPOSE 8182
 EXPOSE 8183
