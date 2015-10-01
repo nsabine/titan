@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ $(ls /conf|wc -l) = 0 ]; then
-  cp -r ${TITAN_HOME}/conf/* /conf
-fi
-
 if [ -n "${CASSANDRA_PORT_9160_TCP_ADDR}" ]; then
   cat >> ${TITAN_PROPERTIES} <<END
 storage.backend=cassandra
@@ -22,5 +18,5 @@ g = TitanFactory.open("${TITAN_PROPERITES}")
 println "The graph \'g\' was opened using ${TITAN_PROPERTIES}"
 END
 
-exec ${TITAN_HOME}/bin/gremlin.sh ${TITAN_HOME}/init.groovy"
+exec ${TITAN_HOME}/bin/gremlin.sh ${TITAN_HOME}/init.groovy
 
